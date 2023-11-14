@@ -7,9 +7,16 @@ import { PurchasesModule } from './purchases/purchases.module';
 import { RecommendsModule } from './recommends/recommends.module';
 import { ScheduleModule } from '@nestjs/schedule';
 import { PaymentModule } from './payment/payment.module';
+import { PricingModule } from './pricing/pricing.module';
+import { NotificationModule } from './notification/notification.module';
 
 @Module({
-  imports: [PurchasesModule, RecommendsModule, ScheduleModule.forRoot(), PaymentModule],
+  imports: [
+    RecommendsModule,
+    PurchasesModule,
+    ScheduleModule.forRoot(),
+    PaymentModule,
+  ],
   controllers: [AppController],
   providers: [
     AppService,

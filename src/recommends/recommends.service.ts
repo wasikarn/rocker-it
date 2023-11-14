@@ -14,6 +14,11 @@ export class RecommendsService {
   @Cron('0 0 0 * * *')
   handleCron() {
     this.logger.debug('Called every day at 12:00 am');
+
+    const recentPurchases = this.recentPurchases();
+
+    // loop recentPurchases
+    // create job for each recentPurchases
   }
 
   private recentPurchases() {

@@ -1,4 +1,4 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Controller, Get, Param, Query } from '@nestjs/common';
 import { PurchasesService } from './purchases.service';
 import { Purchase } from '../mocks/mock-purchases.service';
 import { MostBoughtCategoryDto } from './most-bought-category.dto';
@@ -20,4 +20,7 @@ export class PurchasesController {
   ): Promise<MostBoughtCategoryDto> {
     return this.purchasesService.getMostBoughtCategory(+customerId);
   }
+
+  @Get(':id')
+  getPurchase(@Param('id') id: string) {}
 }
