@@ -6,9 +6,10 @@ import { TransformInterceptor } from './transform.interceptor';
 import { PurchasesModule } from './purchases/purchases.module';
 import { RecommendsModule } from './recommends/recommends.module';
 import { ScheduleModule } from '@nestjs/schedule';
+import { PaymentModule } from './payment/payment.module';
 
 @Module({
-  imports: [PurchasesModule, RecommendsModule, ScheduleModule.forRoot()],
+  imports: [PurchasesModule, RecommendsModule, ScheduleModule.forRoot(), PaymentModule],
   controllers: [AppController],
   providers: [
     AppService,
