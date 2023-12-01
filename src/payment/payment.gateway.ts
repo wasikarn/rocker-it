@@ -36,11 +36,3 @@ export class ApplePayGateway implements PaymentGateway {
     console.log(`ApplePayGateway: ${order.id} paid`);
   }
 }
-
-export enum PAYMENT_METHOD {
-  CREDIT_CARD = 'credit_card',
-  PAYPAL = 'paypal',
-  BITCOIN = 'bitcoin',
-  GOOGLE_PAY = 'google_pay',
-  APPLE_PAY = 'apple_pay',
-}

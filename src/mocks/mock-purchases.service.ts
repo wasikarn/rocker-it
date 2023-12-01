@@ -99,7 +99,7 @@ export class MockPurchasesService {
     let purchaseId: number = 1;
     const purchases: Purchase[] = [];
 
-    Array.from({ length: 25 }).map(() => {
+    Array.from({ length: 25 }).map((): void => {
       const product: Product = this.getProduct();
       const customer: Customer = this.getCustomer();
 
